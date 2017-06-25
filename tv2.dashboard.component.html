@@ -1,0 +1,272 @@
+
+
+
+
+<div class="ui-g">
+     <div class="ui-g-11"> 
+        <div style="text-align:left !important;width:95% !important">
+        <p-menubar [model]="items"></p-menubar>
+        </div>
+     </div>
+       <div class="ui-g-1">
+         <div class="ui-toolbar-group-right">
+          <button type="button" (click)="showDialog()" pButton icon="fa-external-link-square" label="TV2" style="height:40px"></button>
+         </div>
+       </div>
+  </div>
+
+    <br/>
+    <br/>
+    <br/>
+<div class="ui-g">
+    <div class="ui-g-2"><input type="text" pInputText /><h4>Account Number</h4></div>
+    <div class="ui-g-2"><p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues" label="Same Customer"></p-checkbox> </div>
+    <div class="ui-g-2"><input type="text" pInputText /><h4>Customer Number</h4></div>
+ </div>
+
+
+<div class="ui-g">
+    
+    <div class="ui-g-6">
+        <p-dataTable [value]="accounts">
+            <p-column field="accountNumber" header="Number"></p-column>
+            <p-column field="name" header="Type"></p-column>
+            <p-column field="type" header="Account Title/name/Other"></p-column>
+        </p-dataTable>
+    </div>
+    
+    <div class="ui-g-6"></div>
+ </div>
+
+
+  <p-dialog header="StoreVision Teller TV2" [(visible)]="display"  width="1200" [responsive]="true"  [dismissableMask]="true">
+   
+    <div style="text-align:left !important;width:95% !important">
+               <p-menubar [model]="items"></p-menubar>
+           </div>
+<br/><br/><br/>
+   
+ <div class="ui-g">
+    <div class="ui-g-4"><input type="text" pInputText /><h4>Account Number</h4></div>
+    <div class="ui-g-4"><p-checkbox name="groupname" value="val1" [(ngModel)]="selectedValues" label="Same Customer"></p-checkbox> </div>
+    <div class="ui-g-4"><input type="text" pInputText /><h4>Customer Number</h4></div>
+  </div>
+ 
+<p-dataTable [value]="accounts">
+    <p-column field="accountNumber" header="Number"></p-column>
+    <p-column field="name" header="Type"></p-column>
+    <p-column field="type" header="Account Title/name/Other"></p-column>
+ </p-dataTable>
+
+<div class="ui-g">
+    <div class="ui-g-4" style="width:400px">
+       
+  <p-fieldset legend="Start Customer Session" >
+
+<table border="0">
+    <tr>
+       <td  colspan="2"><button type="button" class="btn btn-primary btn-lg gradient">PIN Pad: Ready</button></td>
+      
+    </tr>
+    <tr>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px">Cardless PIN</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px">Solutions</button></td>
+    </tr>
+
+      <tr>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px">Find Customer</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px">End Session</button></td>
+      </tr>
+</table>
+
+
+
+</p-fieldset>
+
+
+	
+
+</div>
+    <div class="ui-g-4">
+        <br/><br/> <br/><br/>
+<table border="0">
+    <tr>
+       <td  colspan="2">&nbsp;</td>
+      
+    </tr>
+    <tr>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px;font-size:14px">PINPad View</button></td>
+       <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+         <td align="left">&nbsp;</td>
+    </tr>
+
+      <tr>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px;font-size:14px">Accounts</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px;font-size:14px">Open/Inquire</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px;font-size:14px">Cashbox</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px;font-size:14px">Acct.Signatures</button></td>
+      </tr>
+</table>
+
+    </div>
+</div>
+  
+  <p-messages [(value)]="msgs" ></p-messages>
+
+       
+  </p-dialog>
+
+<br/>
+<br/>
+<div class="ui-g">
+    <div class="ui-g-4" style="width:400px">
+       
+  <p-fieldset legend="Start Customer Session" >
+
+<table border="0">
+    <tr>
+       <td  colspan="2"><button type="button" class="btn btn-primary btn-lg gradient">PIN Pad: Ready</button></td>
+      
+    </tr>
+    <tr>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px">Cardless PIN</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px">Solutions</button></td>
+    </tr>
+
+      <tr>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px">Find Customer</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px">End Session</button></td>
+      </tr>
+</table>
+
+
+
+</p-fieldset>
+
+
+	
+
+</div>
+    <div class="ui-g-4">
+        <br/><br/> <br/><br/>
+<table border="0">
+    <tr>
+       <td  colspan="2">&nbsp;</td>
+      
+    </tr>
+    <tr>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px;font-size:14px">PINPad View</button></td>
+       <td align="left">&nbsp;</td>
+        <td align="left">&nbsp;</td>
+         <td align="left">&nbsp;</td>
+    </tr>
+
+      <tr>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px;font-size:14px">Accounts</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px;font-size:14px">Open/Inquire</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px;font-size:14px">Cashbox</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px;font-size:14px">Acct.Signatures</button></td>
+      </tr>
+</table>
+
+    </div>
+</div>
+  
+  <p-messages [(value)]="msgs" ></p-messages>
+
+  <p-dialog header="Select PIN" [(visible)]="pinSelect"  width="800" [responsive]="true" modal="true" >
+  
+    <div class="ui-g">
+        <div class="ui-g-12" >
+        <p-fieldset legend="PIN Pad Setup" > 
+            
+            <table border="0">
+        <tr>
+            <td align="right">Card &nbsp;&nbsp;</td>
+            <td colspan="2"  align="left"><input type="text" pInputText   style="width:300px"/></td>
+             <td></td>
+        </tr>
+        <tr>
+            <td align="right">Card Holder &nbsp;&nbsp;</td>
+            <td colspan="3" align="left"><input type="text" pInputText  style="width:400px"/></td>
+            
+        </tr>
+        <tr>
+            <td align="right">Current PIN &nbsp;&nbsp;</td>
+            <td align="left"><input type="text" pInputText /></td>
+            <td colspan="2">&nbsp;&nbsp;
+                 <p-checkbox name="group1" value="" label="Customer does not know current PIN" ></p-checkbox>
+            </td>
+             
+        </tr>
+        <tr>
+            <td align="right">New PIN &nbsp;&nbsp;</td>
+            <td align="left"> <input type="text" pInputText /></td>
+            <td align="left">&nbsp;&nbsp;&nbsp;&nbsp;PIN must be 4-12 numbers</td>
+             <td></td>
+        </tr>
+
+    </table>    
+            
+        </p-fieldset>
+ <br/>
+       <table border="0" width="700px">
+           <tr>
+               <td align="left"> Primary ID</td>
+               <td colspan="12"> &nbsp;</td>
+               <td align="left"> Number</td>
+               
+           </tr>
+            <tr><td align="left"> 
+                <select class="form-control" id="primaryId">
+                <option>Choose</option>
+                <option>Drivers License Drivers License</option>
+                <option>Passport</option>
+                </select>
+                </td>
+                 <td colspan="12"> </td>
+                    <td align="left"> <input type="text" pInputText /></td>
+            </tr>
+            <tr>
+               <td align="left"> &nbsp;</td>
+                <td colspan="12"> </td>
+             
+           </tr>
+           <tr>
+               <td align="left"> Second ID</td>
+                <td colspan="12"> </td>
+           </tr>
+            <tr><td align="left"> 
+                <select class="form-control" id="secondId">
+                <option>PIN</option>
+                <option>Drivers License Drivers License</option>
+                <option>Passport</option>
+                </select>
+                </td>
+                 <td colspan="12"> </td>
+            </tr>
+           
+       </table>
+       
+    <table>
+             <tr>
+               <td colspan="4"> &nbsp;</td>
+           </tr>
+    <tr>
+       <td align="left">&nbsp;&nbsp;&nbsp;</td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px;font-size:14px">OK</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient" style="width:150px;font-size:14px">RESET</button></td>
+       <td align="left"><button type="button" class="btn btn-primary btn-lg gradient"  style="width:150px;font-size:14px">CANCEL</button></td>
+      </tr>
+</table>
+        </div>
+    </div>
+  
+
+
+
+
+    <p-messages [(value)]="pinMsgs" ></p-messages>
+       
+  </p-dialog>
