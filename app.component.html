@@ -1,7 +1,20 @@
 <!--The whole content below can be removed with the new code.-->
 <div style="text-align:center">
-<tv2-dashboard></tv2-dashboard>
-</div>
+  <h1>
+    Welcome to {{title}}!!
+  </h1>
 
+  <div>
+    <form [formGroup]="form">
+      User Name: <input type="text" formControlName="username"> Password :
+      <input type="password" formControlName="password">
+      <button type="button" (click)="login()">Submit</button>
+      <div *ngIf="!username.valid && username.touched">
+        Invalid data
+      </div>
+      <div *ngIf="!password.valid && password.touched">
+        Invalid Password
+      </div>
 
-
+    </form>
+  </div>

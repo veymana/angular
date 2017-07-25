@@ -1,42 +1,24 @@
+import { UserService } from './user.service';
 import { BrowserModule } from '@angular/platform-browser';
-import { NgModule } from '@angular/core';
-
+import { NgModule, ErrorHandler } from '@angular/core';
 import { AppComponent } from './app.component';
-import {Tv2DashboardComponent} from './tv2/tv2.dashboard.component'
-import { FormsModule } from '@angular/forms';
-import {HttpModule} from '@angular/http';
-import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import {MenubarModule,MenuItem} from 'primeng/primeng';
-import {CheckboxModule} from 'primeng/primeng';
-import {AccountService} from './tv2/tv2.dashboard.service';
-import {DataTableModule,SharedModule} from 'primeng/primeng';
-import {ButtonModule} from 'primeng/primeng';
-import {DialogModule} from 'primeng/primeng';
-import {OverlayPanelModule} from 'primeng/primeng';
-import {FieldsetModule} from 'primeng/primeng';
-import {MessagesModule} from 'primeng/primeng';
+import { SystemErrorHandler } from './common/system-error'
+import { HttpModule } from '@angular/http'
+import { ReactiveFormsModule } from '@angular/forms'
+
 
 @NgModule({
   declarations: [
-    AppComponent,
-    Tv2DashboardComponent
+    AppComponent
   ],
   imports: [
     BrowserModule,
-    FormsModule ,
     HttpModule,
-    MenubarModule,
-    CheckboxModule,
-    DataTableModule,
-    SharedModule,
-    ButtonModule,
-    DialogModule,
-    BrowserAnimationsModule,
-    OverlayPanelModule,
-    FieldsetModule,
-    MessagesModule
+    ReactiveFormsModule
   ],
-  providers: [AccountService],
+  providers: [UserService,
+    { provide: ErrorHandler, useClass: SystemErrorHandler }
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
